@@ -1,10 +1,1 @@
-{
-  "manifest_version": 3,
-  "name": "__MSG_name__",
-  "description": "__MSG_description__",
-  "version": "0.1.0",
-  "default_locale": "ja",
-  "action": {
-    "default_popup": "src/popup/popup.html"
-  }
-}
+{"action":{"default_icon":{"16":"icons/icon16.png","32":"icons/icon32.png"},"default_title":"PhoenixField"},"content_scripts":[{"js":["src/content/content.js"],"matches":["http://*/*","https://*/*"],"run_at":"document_idle"}],"default_locale":"ja","description":"__MSG_description__","icons":{"128":"icons/icon128.png","16":"icons/icon16.png","32":"icons/icon32.png","48":"icons/icon48.png"},"manifest_version":3,"name":"__MSG_name__","options_page":"src/options/options.html","permissions":["storage"],"version":"0.2.0"}

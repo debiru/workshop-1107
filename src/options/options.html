@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PhoenixField 設定</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <h1>🔥 PhoenixField 設定</h1>
+
+    <section aria-labelledby="basic-heading">
+      <h2 id="basic-heading">基本設定</h2>
+      <form id="settings-form">
+        <p>
+          <label>
+            <input type="checkbox" id="enabled">
+            自動保存を有効にする
+          </label>
+        </p>
+        <fieldset>
+          <legend>対象範囲</legend>
+          <p>
+            <label>
+              <input type="radio" name="scope" value="textlike">
+              テキスト系の input（text / email / search / url / tel）と textarea（案2）
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="radio" name="scope" value="textonly">
+              input type="text" と textarea のみ（案1）
+            </label>
+          </p>
+          <p class="note">※ type="password" は常に対象外です。</p>
+        </fieldset>
+        <p>
+          <label for="maxGenerations">世代の最大保持数（1〜100）</label>
+          <input type="number" id="maxGenerations" min="1" max="100" step="1">
+        </p>
+        <p>
+          <label for="snapshotIntervalMinutes">世代スナップショットの間隔（分）</label>
+          <input type="number" id="snapshotIntervalMinutes" min="1" max="120" step="1">
+        </p>
+        <p>
+          <label for="snapshotMinChangeChars">世代スナップショットに必要な変化量（文字数）</label>
+          <input type="number" id="snapshotMinChangeChars" min="1" max="10000" step="1">
+        </p>
+        <p>
+          <label for="retentionDays">世代の保持日数（日）</label>
+          <input type="number" id="retentionDays" min="1" max="3650" step="1">
+        </p>
+        <p>
+          <button type="submit">設定を保存</button>
+          <span id="settings-msg" role="status"></span>
+        </p>
+      </form>
+    </section>
+
+    <section aria-labelledby="data-heading">
+      <h2 id="data-heading">保存データの管理</h2>
+      <p id="usage">ストレージ使用量: 読み込み中…</p>
+      <div id="pages"></div>
+      <p>
+        <button type="button" id="export-btn">保存データを JSON でエクスポート</button>
+        <button type="button" id="delete-all-btn" class="danger">すべての保存データを削除</button>
+      </p>
+    </section>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>

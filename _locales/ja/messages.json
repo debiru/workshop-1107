@@ -1,8 +1,1 @@
-{
-  "name": {
-    "message": "仮の名前"
-  },
-  "description": {
-    "message": "（概要は企画後に記入）"
-  }
-}
+{"description":{"message":"入力中のテキストを自動保存し、ブラウザのクラッシュやセッションタイムアウトで消えてしまった入力を復元します。"},"name":{"message":"PhoenixField"}}
