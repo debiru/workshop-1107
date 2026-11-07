@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_name__",
+  "description": "__MSG_description__",
+  "version": "0.1.0",
+  "default_locale": "ja",
+  "action": {
+    "default_popup": "src/popup/popup.html"
+  }
+}
